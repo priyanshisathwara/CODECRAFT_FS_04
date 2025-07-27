@@ -2,8 +2,8 @@
   position: fixed;
   bottom: 18.5%;
   right: 3.5%;
-  background-color: #415763;
-  color: white;
+  background-color: var(--color-accent);  /* Indigo button background */
+  color: var(--color-message-sent);       /* White icon/text */
   border: none;
   border-radius: 50%;
   width: 2.5rem;

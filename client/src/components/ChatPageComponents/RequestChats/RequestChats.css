@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  background-color: var(--color-bg); /* optional: for scroll container background */
 }
 
 .request-chats::-webkit-scrollbar {
@@ -10,7 +11,6 @@
 }
 
 .request-chats::-webkit-scrollbar-thumb {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  /* background-color: #222e35; */
-  background-color: #111b21;
+  -webkit-box-shadow: inset 0 0 6px rgba(31, 41, 55, 0.3); /* based on --color-text */
+  background-color: var(--color-text); /* matches dark text tone */
 }

@@ -1,5 +1,6 @@
 .friend-requests {
-  background-color: #111b21;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -17,6 +18,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .friend-requests .sub-header h1 {
   margin: 0;
 }
@@ -27,15 +29,12 @@
 .friend-requests .modal-content .scrollbar-triangle-upside-down {
   margin-right: 0.05rem;
   font-size: 0.4rem;
-  color: #222e35;
-}
-.friend-requests .scrollbar-triangle-upside-down,
-.friend-requests .modal-content .scrollbar-triangle-upside-down {
-  margin-bottom: 0.05rem;
+  color: var(--color-accent);
 }
 
 .friend-requests .scrollbar-triangle-upside-down,
 .friend-requests .modal-content .scrollbar-triangle-upside-down {
+  margin-bottom: 0.05rem;
   transform: rotate(180deg);
 }
 
@@ -55,7 +54,7 @@
   position: absolute;
   top: 0.6rem;
   left: 0.8rem;
-  color: #e9edef;
+  color: var(--color-text);
   width: 1.5rem;
 }
 
@@ -64,11 +63,11 @@
 }
 
 .friend-requests .search-input {
-  background-color: #202c33;
+  background-color: var(--color-message-received);
   height: 2.5rem;
   text-indent: 2.5rem;
   border-radius: 10px;
-  color: #e9edef;
+  color: var(--color-text);
   width: 100%;
   border: none;
   outline: none;
@@ -79,20 +78,23 @@
   outline: none;
 }
 
-.friend-requests .contacts-container {
+.friend-requests .contacts-container,
+.friend-requests .request-chats-container {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
 }
 
-.friend-requests .contacts-container::-webkit-scrollbar {
+.friend-requests .contacts-container::-webkit-scrollbar,
+.friend-requests .request-chats-container::-webkit-scrollbar {
   width: 0.5rem;
   background-color: transparent;
 }
 
-.friend-requests .contacts-container::-webkit-scrollbar-thumb {
+.friend-requests .contacts-container::-webkit-scrollbar-thumb,
+.friend-requests .request-chats-container::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #222e35;
+  background-color: var(--color-accent);
 }
 
 .friend-requests .searched-contacts {
@@ -107,13 +109,13 @@
   padding: 0.5rem;
   margin: 0.5rem;
   cursor: pointer;
-  border-left: 2px solid #222e35;
-  background-color: rgba(42, 43, 51, 0.25);
-  color: white;
+  border-left: 2px solid var(--color-accent);
+  background-color: rgba(79, 70, 229, 0.1); /* light indigo background */
+  color: var(--color-text);
 }
 
 .friend-requests .searched-contacts .single-contact:hover {
-  background-color: #222e35;
+  background-color: var(--color-message-received);
 }
 
 .friend-requests .searched-contacts .single-contact .avatar-main-container {
@@ -139,7 +141,7 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: var(--color-text);
   border-radius: 50%;
 }
 
@@ -151,20 +153,4 @@
 
 .friend-requests .searched-contacts .single-contact-info div:last-child {
   font-size: 0.7rem;
-}
-
-.friend-requests .request-chats-container {
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-}
-
-.friend-requests .request-chats-container::-webkit-scrollbar {
-  width: 0.5rem;
-  background-color: transparent;
-}
-
-.friend-requests .request-chats-container::-webkit-scrollbar-thumb {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #222e35;
 }

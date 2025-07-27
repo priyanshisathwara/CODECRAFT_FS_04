@@ -1,5 +1,5 @@
 .left-sidebar-contact-or-group-profile {
-  background-color: #111b21;
+  background-color: var(--color-bg);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -8,6 +8,7 @@
 .left-sidebar-contact-or-group-profile h1 {
   margin: 0;
   padding: 1rem;
+  color: var(--color-text);
 }
 
 .left-sidebar-contact-or-group-profile .info-container {
@@ -36,6 +37,7 @@
   max-height: 11vh;
   overflow-y: auto;
 }
+
 .left-sidebar-contact-or-group-profile .group-members::-webkit-scrollbar,
 .left-sidebar-contact-or-group-profile .shared-groups::-webkit-scrollbar {
   width: 0.5rem;
@@ -45,7 +47,7 @@
 .left-sidebar-contact-or-group-profile .group-members::-webkit-scrollbar-thumb,
 .left-sidebar-contact-or-group-profile .shared-groups::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #222e35;
+  background-color: var(--color-message-received);
   border-radius: 10px;
 }
 
@@ -54,13 +56,12 @@
   width: 100%;
   min-height: 3.5rem;
   max-height: 22.5vh;
-  /* height: 50%; */
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
   row-gap: 0.5rem;
   overflow-y: auto;
 }
+
 .left-sidebar-contact-or-group-profile .shared-files::-webkit-scrollbar {
   width: 0.5rem;
   background-color: transparent;
@@ -68,14 +69,14 @@
 
 .left-sidebar-contact-or-group-profile .shared-files::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #222e35;
+  background-color: var(--color-message-received);
   border-radius: 10px;
 }
 
 .left-sidebar-contact-or-group-profile .shared-file {
   width: 33%;
-  /* height: 30%; */
 }
+
 .left-sidebar-contact-or-group-profile .shared-file .image-container img {
   width: 5rem;
   height: 5rem;
@@ -85,7 +86,7 @@
 
 .left-sidebar-contact-or-group-profile .shared-file .file-container {
   position: relative;
-  background-color: #415763;
+  background-color: var(--color-accent);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -131,8 +132,9 @@
   .file-container
   .download-icon {
   border-radius: 50%;
-  border: 1px solid #e9edef;
-  background-color: #005c4b;
+  border: 1px solid var(--color-message-received);
+  background-color: var(--color-accent);
+  color: white;
 }
 
 .left-sidebar-contact-or-group-profile
@@ -140,7 +142,7 @@
   .file-container
   .download-icon-container-link {
   opacity: 0;
-  color: #e9edef;
+  color: var(--color-message-received);
   transition: all 0.3s ease-in-out;
 }
 
@@ -155,14 +157,13 @@
   display: flex;
   text-align: center;
   font-size: 0.75rem;
+  color: var(--color-text);
 }
 
 .left-sidebar-contact-or-group-profile .footer {
   display: flex;
   width: 100%;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
   gap: 0.5rem;
 }
 
@@ -171,19 +172,20 @@
   gap: 1rem;
   justify-content: space-between;
 }
+
 .left-sidebar-contact-or-group-profile .info-input-container .label {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--color-text);
 }
 
 .left-sidebar-contact-or-group-profile .info-input {
   border-radius: 10px;
   padding: 1rem;
-  background-color: #2c2e3b;
+  background-color: var(--color-message-received);
   border: none;
-  color: white;
-  /* opacity: 0.5; */
+  color: var(--color-text);
 }
 
 .left-sidebar-contact-or-group-profile .info-input.disabled {
@@ -198,23 +200,20 @@
   border: none;
   outline: none;
   border-radius: 10px;
-}
-.left-sidebar-contact-or-group-profile .info-button {
-  background-color: #415763;
-}
-.left-sidebar-contact-or-group-profile .logout-button {
-  background-color: rgb(158, 24, 24);
-}
-
-.left-sidebar-contact-or-group-profile .info-button:hover {
-  cursor: pointer;
   color: white;
-  opacity: 0.8;
 }
 
+.left-sidebar-contact-or-group-profile .info-button {
+  background-color: var(--color-accent);
+}
+
+.left-sidebar-contact-or-group-profile .logout-button {
+  background-color: rgb(158, 24, 24); /* Can optionally convert this to a --color-danger if you define one */
+}
+
+.left-sidebar-contact-or-group-profile .info-button:hover,
 .left-sidebar-contact-or-group-profile .logout-button:hover {
   cursor: pointer;
-  color: white;
   opacity: 0.8;
 }
 
@@ -226,15 +225,13 @@
   justify-content: center;
   align-items: center;
   object-fit: cover;
-  /* overflow: hidden; */
-  /* background-color: #2c2e3b; */
 }
 
 .left-sidebar-contact-or-group-profile .profile-image.group {
   font-size: 5rem;
-  border: 2px solid #415763;
-  background-color: #222e35;
-  color: #111b21;
+  border: 2px solid var(--color-accent);
+  background-color: var(--color-message-received);
+  color: var(--color-text);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,8 +245,9 @@
 .left-sidebar-contact-or-group-profile .contact-info-divider-container {
   display: inline-block;
 }
+
 .left-sidebar-contact-or-group-profile .contact-info-divider {
   margin: -1rem 0;
   height: 2rem;
-  border: 1px solid #415763;
+  border: 1px solid var(--color-accent);
 }

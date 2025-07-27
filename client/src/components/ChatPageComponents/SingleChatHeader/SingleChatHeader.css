@@ -5,8 +5,9 @@
 
   padding: 1rem;
   height: 10%;
-  /* height: 80px; */
   max-height: 80px;
+  background-color: var(--color-message-sent); /* white background */
+  color: var(--color-text); /* dark readable text */
 }
 
 .single-chat-header .icons {
@@ -24,11 +25,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--color-text); /* icon color */
+  background-color: transparent;
+  transition: background-color 0.2s ease;
 }
+
 .single-chat-header .icon:hover {
   cursor: pointer;
-  border-radius: 50%;
-  background-color: #415763;
+  background-color: var(--color-message-received); /* light hover */
 }
 
 .single-chat-header .user {
@@ -45,6 +49,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .single-chat-header .avatar .img {
   width: 2.5rem;
   height: 2.5rem;
@@ -61,19 +66,18 @@
 
 .single-chat-header .avatar .img.non-present,
 .single-chat-header .avatar .group-img {
-  border: 2px solid #415763;
-}
-.single-chat-header .avatar .img.non-present {
-  font-size: 0.875rem;
+  border: 2px solid var(--color-accent); /* Indigo border */
 }
 
 .single-chat-header .avatar .img.non-present {
+  font-size: 0.875rem;
   cursor: pointer;
 }
 
 .single-chat-header .info {
   display: flex;
   flex-direction: column;
+  color: var(--color-text);
 }
 
 .single-chat-header .info:hover {

@@ -2,11 +2,11 @@
   padding: 1rem 1rem 0 1rem;
   display: flex;
   gap: 1rem;
+  background-color: transparent;
 }
 
 .chat:hover {
-  /* background-color: #202c33; */
-  background-color: #202c3390;
+  background-color: rgba(255, 255, 255, 0.05); /* soft hover effect for dark mode */
   cursor: pointer;
 }
 
@@ -26,15 +26,12 @@
   justify-content: center;
   align-items: center;
   margin-top: -1rem;
-}
-
-.chat .img {
   object-fit: cover;
 }
 
 .chat .img.non-present,
 .chat .group-img {
-  border: 2px solid #415763;
+  border: 2px solid var(--color-message-received); /* Soft gray border */
 }
 
 .chat .chat-info {
@@ -50,14 +47,14 @@
 }
 
 .chat .date {
-  color: #8696a0;
+  color: #565758;
   font-size: 0.75rem;
 }
 
 .chat .last-message {
   padding-bottom: 1rem;
-  border-bottom: 1px solid #415763;
-  color: #8696a0;
+  border-bottom: 1px solid var(--color-message-received);
+  color: #565758;
   font-size: 0.75rem;
   display: flex;
   align-items: center;
@@ -66,11 +63,11 @@
 }
 
 .chat .last-message.active-chat {
-  color: #d1d7db;
+   color: #565758;
 }
 
 .chat.active-chat {
-  background-color: #202c33;
+  background-color: rgba(255, 255, 255, 0.08); /* Active chat highlight */
 }
 
 .chat .last-message .last-message-file {

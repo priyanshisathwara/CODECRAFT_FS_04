@@ -5,6 +5,8 @@
   justify-content: center;
   align-items: center;
   gap: 10rem;
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 .profile-landing-page .go-back-arrow {
@@ -12,12 +14,13 @@
   align-items: center;
   justify-content: center;
   font-size: 3rem;
+  color: var(--color-text);
 }
 
 .profile-landing-page .go-back-arrow:hover {
   cursor: pointer;
   border-radius: 50%;
-  background-color: #415763;
+  background-color: var(--color-message-received); /* subtle hover effect */
 }
 
 .profile-landing-page .info-container {
@@ -38,9 +41,9 @@
 .profile-landing-page .info-input {
   border-radius: 10px;
   padding: 1rem;
-  background-color: #2c2e3b;
-  border: none;
-  color: white;
+  background-color: var(--color-message-sent);
+  border: 1px solid var(--color-message-received);
+  color: var(--color-text);
 }
 
 .profile-landing-page .info-input.disabled {
@@ -51,17 +54,18 @@
 .profile-landing-page .info-button {
   margin-top: 1rem;
   padding: 0.5rem;
-  background-color: #415763;
+  background-color: var(--color-accent);
   border: none;
   outline: none;
   border-radius: 10px;
+  color: white;
 }
 
 .profile-landing-page .info-button:hover {
   cursor: pointer;
-  background-color: #2c2e3b;
-  color: white;
-  opacity: 0.5;
+  background-color: var(--color-message-received);
+  color: var(--color-text);
+  opacity: 0.8;
 }
 
 .profile-landing-page .hidden {
@@ -77,11 +81,11 @@
   align-items: center;
   object-fit: cover;
   overflow: hidden;
-  /* background-color: #2c2e3b; */
+  background-color: var(--color-message-sent);
 }
 
 .profile-landing-page .profile-landing-page-image.uploading {
-  background-color: #2c2e3b;
+  background-color: var(--color-message-received);
 }
 
 .profile-landing-page .button-disabled {
